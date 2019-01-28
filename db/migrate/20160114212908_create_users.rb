@@ -1,8 +1,8 @@
-class CreateUsers < ActiveRecord::Migration
+class CreatePosts < ActiveRecord::Migration
   def change
-    create_table :users do |t|
-      t.string :username
-      t.string :email
+    create_table :posts do |t|
+      t.string :title
+      t.string :content
       t.timestamps null: false
     end
   end

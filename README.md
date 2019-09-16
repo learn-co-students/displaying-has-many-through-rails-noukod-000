@@ -1,4 +1,3 @@
-
 # Displaying Has Many Through Rails
 
 ## Objectives
@@ -16,11 +15,11 @@ We've seen how we can use simple associations to display data to our users in Ra
 
 ### has_many, through
 
-Let's say you're making a blog and want to give users the ability to sign up and comment on your posts. What's the relationship between a post and a comment?  If you said, "A comment belongs to a post, and a post has many comments," give yourself a pat on the back!
+Let's say you're making a blog and want to give users the ability to sign up and comment on your posts. What's the relationship between a post and a comment? If you said, "A comment belongs to a post, and a post has many comments," give yourself a pat on the back!
 
 What about the relationship between a user and a comment? Again, a user has many comments, and a comment belongs to the user. So far, this is pretty straightforward.
 
-Things get slightly more complicated when we talk about the relationship between a user and the posts that the user has commented on. How would you describe that relationship? Well, a user obviously can comment on many posts, and a post has comments from many users. Yep, this is a many to many relationship. We can set up a many-to-many relationship using a join table. In this case, `comments` will act as our join table. Any table that contains two foreign keys can be thought of as a join table.  A row in our `comments` table will look something like this:
+Things get slightly more complicated when we talk about the relationship between a user and the posts that the user has commented on. How would you describe that relationship? Well, a user obviously can comment on many posts, and a post has comments from many users. Yep, this is a many to many relationship. We can set up a many-to-many relationship using a join table. In this case, `comments` will act as our join table. Any table that contains two foreign keys can be thought of as a join table. A row in our `comments` table will look something like this:
 
 <table>
   <tr>
